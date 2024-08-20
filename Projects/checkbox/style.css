@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+input{
+    appearance: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: bolder;
+
+}
+
+input::before{
+    content: "ON";
+    color: green;
+
+}
+
+input:checked::before{
+    content: "OFF";
+    color: red;
+
+}

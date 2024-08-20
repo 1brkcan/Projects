@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaking Button</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        button {
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: rgb(34, 119, 239);
+            color: white;
+            font-size: 2rem;
+            border: none;
+
+        }
+
+        button:hover {
+            animation: shake .2s linear infinite both;
+
+        }
+
+        @keyframes shake{
+            0%{
+                transform: translate(0);
+            }
+            20%{
+                transform: translate(-2px, 2px);
+            }
+            40%{
+                transform: translate(-2px, -2px);
+            }
+            60%{
+                transform: translate(2px, 2px);
+            }
+            80%{
+                transform: translate(2px, -2px);
+            }
+            100%{
+                transform: translate(0);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <button>Shake</button>
+</body>
+</html>

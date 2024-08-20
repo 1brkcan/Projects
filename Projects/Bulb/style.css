@@ -1,0 +1,156 @@
+:root{
+    --color-dark: #000;
+    --color-light: #fff;
+    --shadow-color: #e8fd00;
+
+}
+
+
+body[data-theme = "light"] {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.light-bulb {
+    display: inline-block;
+    background: none;
+    border: none;
+    transform-origin: center top;
+    animation: swing 3s ease-in-out infinite alternate;
+    cursor: pointer;
+
+}
+
+.light-bulb:hover .light-bulb_image img{
+    animation: flicker 2s linear infinite alternate;
+
+}
+
+.light-bulb:hover.light-bulb_image:before{
+    animation: flicker-light 2s linear infinite alternate;
+
+}
+
+.light-bulb_image{
+    position: relative;
+    transform-origin: center top;
+    animation: scale 2.5s -1.5s ease-in-out infinite alternate;
+
+}
+
+.light-bulb_image::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 0;
+    scale: 1 0.7;
+    translate: 6px -16px;
+    opacity: 0.6;
+    box-shadow: 0 0 102px 64px var(--shadow-color);
+
+}
+
+.light-bulb_image img{
+    display: block;
+    filter: saturate(1);
+    width: 540px;
+
+}
+
+@keyframes swing{
+    0%{
+        rotate: 4deg;
+    }
+    100%{
+        rotate: -4deg;
+    }
+}
+
+@keyframes scale{
+    0%{
+        scale: 0.98;
+    }
+    100%{
+        scale: 1.02;
+    }
+}
+
+@keyframes flicker{
+    0%,
+    100%,
+    12%,
+    20%,
+    30%,
+    4%,
+    40%,
+    50%,
+    8%{
+        filter: saturate(0);
+    }
+    10%,
+    2%,
+    6%{
+        filter: saturate(1.4);
+    }
+    25%,
+    35%,
+    45%{
+        filter: saturate(1.6);
+    }
+    80%{
+        filter: saturate(3);
+    }
+}
+
+@keyframes flicker-light{
+    0%,
+    100%,
+    12%,
+    20%,
+    30%,
+    4%,
+    40%,
+    50%,
+    8%{
+        filter: saturate(0);
+        opacity: 0,5;
+    }
+    10%,
+    2%,
+    6%{
+        filter: saturate(1.4);
+        opacity: 0.6;
+    }
+    25%,
+    35%,
+    45%{
+        filter: saturate(1.6);
+        opacity: 0.6;
+    }
+    80%{
+        filter: saturate(3);
+        opacity: 0.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

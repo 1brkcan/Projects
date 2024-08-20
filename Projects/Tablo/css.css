@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+    transform: translate(0%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.zigzag{
+    overflow: hidden;
+
+}
+
+th, td{
+    padding: .25em .5em;
+    text-align: left;
+    vertical-align: top;
+
+}
+
+th{
+    background-color: #009;
+    color: #fff;
+
+}
+
+td{
+    background-color: #eee;
+
+}
+
+tr{
+    transition: all 1s ease-in-out;
+    &.slide-out{
+        transform: translateX(100%);
+    }
+}
+
+
+
+

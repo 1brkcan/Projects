@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asdad.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(91, 8, 8);
+        }
+        
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            isolation: isolate;
+            width: 600px;
+            height: 200px;
+            margin:200px auto;
+            background-color: #000;
+            border-radius: 8px;
+        }
+        .card-image{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 20%;
+            border-radius: inherit;
+            transition: transform 1s;
+        }
+        .card:hover .card-image{
+            transform: translateY(-112px) scale(0.75);
+        }
+        .card-body{
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 24px;
+            color:#f4c644;
+        }
+        .card-category{
+            color: #fff;
+        }
+        .card-button{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            background-color: #f4c644;
+            color: #000;
+            font-weight: bolder;
+        }
+        .bayrak{
+            width: 2px;
+            height: 2px;
+            object-fit: fill;
+        }
+        .card-button:hover{
+            /* background-image: url(download.png); */
+            background-color: #fff;
+            transition: 1s linear;
+
+        }
+
+    </style>
+</head>
+<body>
+    <figure class="card">
+        <img src="ata.jpg" alt="" class="card-image">
+        <figcaption class="card-body">
+            <div>
+                <h2 class="card-category">Mustafa Kemal Atatürk</h2>
+                <p class="card-author">Türkiye Cumhuriyeti Devletinin Kurucusu</p>
+            </div>
+            <a href="https://tr.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk" target="_blank" class="card-button">Asalet</a>
+        </figcaption>
+    </figure>
+</body>
+</html>
